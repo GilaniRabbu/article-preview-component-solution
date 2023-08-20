@@ -1,0 +1,252 @@
+:root {
+    --clr-neutral-100: hsl(210, 46%, 95%);
+    --clr-neutral-200: hsl(212, 23%, 69%);
+    --clr-neutral-300: hsl(214, 17%, 51%);
+    --clr-neutral-400: hsl(217, 19%, 35%);
+
+    --fs-primary: 0.8125rem;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+
+    --ff-primary: 'Manrope', sans-serif;
+
+    --spacer: 1rem;
+
+    --shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.05);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-primary);
+    font-weight: var(--fw-regular);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--clr-neutral-100);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: var(--shadow);
+}
+
+.img-section {
+    max-width: 40%;
+    height: 100%;
+}
+
+.intro-img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.card-info {
+    max-width: 60%;
+    height: 100%;
+    padding: 1.2rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-400);
+    margin-bottom: var(--spacer);
+}
+
+.card-description {
+    color: var(--clr-neutral-300);
+    margin-bottom: var(--spacer);
+}
+
+.author-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.author-img {
+    max-width: 15%;
+    border-radius: 50%;
+}
+
+.author-info {
+    margin-left: 1rem;
+}
+
+.name {
+    margin: 0;
+    width: 280px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-400);
+}
+
+.date {
+    margin: 0;
+    color: var(--clr-neutral-300);
+}
+
+.share-image {
+    max-width: 100%;
+    padding: 0.8rem;
+    border-radius: 50%;
+    background-color: var(--clr-neutral-100);
+}
+
+.share-image:hover {
+    cursor: pointer;
+    background-color: var(--clr-neutral-200);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.social {
+    width: 220px;
+    height: 50px;
+    background-color: var(--clr-neutral-400);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    color: white;
+    position: absolute;
+    left: 277px;
+    bottom: 70px;
+}
+
+.social::before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: var(--clr-neutral-400) transparent transparent transparent;
+    content: "";
+    position: absolute;
+    right: 105px;
+    top: 50px;
+}
+
+.icon-title {
+    color: var(--clr-neutral-200);
+    font-size: var(--fs-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.mobile-social {
+    display: none;
+}
+
+@media (max-width: 860px) {
+    main {
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    .img-section {
+        max-width: 100%;
+    }
+
+    .intro-img {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0rem;
+    }
+
+    .card-info {
+        max-width: 100%;
+        position: relative;
+        padding: 0 !important;
+        margin-top: 1rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    .card-title {
+        padding: 0.5rem 2.5rem;
+    }
+
+    .card-description {
+        padding: 0.5rem 2.5rem;
+    }
+
+    .author-section {
+        max-width: 100%;
+        padding: 1rem 2.5rem;
+    }
+
+    .name {
+        width: 200px;
+    }
+
+    .name,
+    .date {
+        padding: 0;
+    }
+
+    .share-image {
+        max-width: 50px;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .mobile-social {
+        width: 100%;
+        background: var(--clr-neutral-400);
+        height: 65px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        position: absolute;
+        bottom: .1%;
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    .mobile-social::before {
+        border-width: 0;
+        position: absolute;
+    }
+
+    .mobile-share {
+        cursor: pointer;
+        background-color: var(--clr-neutral-100);
+        padding: 0.5rem;
+        border-radius: 50%;
+    }
+}
+
+@media (max-width: 370px) {
+    .name {
+        width: 170px;
+    }
+}
