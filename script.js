@@ -1,17 +1,10 @@
-const ShareButton = document.querySelector("#share-img");
-const Social = document.querySelector("#social-link");
+const btnCardShare = document.getElementById('btn__card--share');
+const cardShare = document.getElementById('card__share');
 
-ShareButton.addEventListener("click", () => {
-    Social.classList.toggle("hidden");
+btnCardShare.addEventListener('click', () => {
+  cardShare.classList.toggle('fade__in');
 });
 
-const MobileBtn = document.querySelector(".mobile-share");
-const MobileSocial = document.querySelector("#mobile-link");
-
-ShareButton.addEventListener("click", () => {
-    MobileSocial.classList.toggle("hidden");
-});
-
-MobileBtn.addEventListener("click", () => {
-    MobileSocial.classList.toggle("hidden");
+cardShare.addEventListener('mouseleave', () => {
+  cardShare.classList.remove('fade__in');
 });
