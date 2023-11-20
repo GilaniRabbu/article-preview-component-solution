@@ -5,70 +5,50 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
-
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-
   <link rel="stylesheet" href="style.css">
-
+  <script src="script.js" defer></script>
   <title>Frontend Mentor | Article Preview Component</title>
 </head>
 
 <body>
-  <main>
-
-    <div class="img-section">
-      <img class="intro-img" src="images/drawers.jpg" alt="Drawers image">
+  <main class="container">
+    <div class="card">
+      <figure class="card__image"></figure>
+      <article class="card__info">
+        <h1 class="card__info--title">
+          Shift the overall look and feel by adding these
+          wonderful touches to furniture in your home
+        </h1>
+        <p class="card__info--desc">
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
+        <div class="card__info--user">
+          <figure>
+            <img class="info__user--image" src="images/author.jpg" alt="Avatar Image">
+          </figure>
+          <section class="info__user--data">
+            <h2>Night King</h2>
+            <p>28 Jun 2020</p>
+          </section>
+          <div class="info__user--share">
+            <i id="btn__card--share" class="fa-solid fa-share"></i>
+          </div>
+          <div class="card__share--icon" id="card__share">
+            <div class="bottom__arrow"></div>
+            <p>SHARE</p>
+            <img class="share__icon" src="images/icon-facebook.svg" alt="Facebook Icon">
+            <img class="share__icon" src="images/icon-twitter.svg" alt="Twitter Icon">
+            <img class="share__icon" src="images/icon-pinterest.svg" alt="Last Icon">
+          </div>
+        </div>
+      </article>
     </div>
-
-    <section class="card-info">
-      <h1 class="card-title">
-        Shift the overall look and feel by adding these
-        wonderful touches to furniture in your home
-      </h1>
-
-      <p class="card-description">
-        Ever been in a room and felt like something was missing? Perhaps
-        it felt slightly bare and uninviting. I’ve got some simple tips
-        to help you make any room feel complete.
-      </p>
-
-      <div class="author-section">
-
-        <img src="images/author.jpg" class="author-img" alt="author image">
-
-        <div class="author-info">
-          <p class="name">Ibrahim Traore</p>
-          <p class="date">28 Jun 2020</p>
-        </div>
-
-        <div class="share-box">
-          <img id="share-img" class="share-image" src="images/icon-share.svg" alt="share icon">
-        </div>
-
-        <div class="social hidden" id="social-link">
-          <span class="icon-title">Share</span>
-          <img src="images/icon-facebook.svg" alt="facebook icon" alt="facebook icon">
-          <img src="images/icon-twitter.svg" alt="twitter icon" alt="twitter icon">
-          <img src="images/icon-pinterest.svg" alt="pinterest icon" alt="pinterest icon">
-        </div>
-
-      </div>
-
-      <div class="mobile-social hidden" id="mobile-link">
-        <span class="icon-title">Share</span>
-        <img src="images/icon-facebook.svg" alt="facebook icon">
-        <img src="images/icon-twitter.svg" alt="twitter icon">
-        <img src="images/icon-pinterest.svg" alt="pinterest icon">
-        <img class="share-img mobile-share" src="images/icon-share.svg" alt="share icon">
-      </div>
-
-    </section>
-
   </main>
-
-  <script src="script.js"></script>
 </body>
 
 </html>
